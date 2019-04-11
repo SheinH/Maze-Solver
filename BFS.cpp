@@ -9,29 +9,17 @@
 struct Point
 {
     int y, x;
-
     bool operator==(const Point &rhs) const
     {
         return y == rhs.y &&
                x == rhs.x;
     }
-
     bool operator!=(const Point &rhs) const
     {
         return !(rhs == *this);
     }
 };
 
-struct Maze
-{
-    int *const maze;
-    const int n;
-
-    int *operator[](int y) const
-    {
-        return maze + (y * n);
-    }
-};
 //Hasher
 namespace std
 {
